@@ -8,7 +8,43 @@
 <body>
   <h1>This a https</h1>
   <h2>Are you now?</h2>
-  
+<style>
+        body {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="textBox"></div>
+
+    <script>
+        // 你可以在这里随便加、删、改句子
+        const texts = [
+            "今天也要加油",
+            "保持开心",
+            "万事顺意",
+            "平安喜乐",
+            "好运常在",
+            "慢慢来，一切都好",
+            "你超棒的"
+        ];
+
+        const textBox = document.getElementById("textBox");
+
+        function showRandomText() {
+            const random = texts[Math.floor(Math.random() * texts.length)];
+            textBox.innerText = random;
+        }
+
+        // 立即显示一句
+        showRandomText();
+        // 每15秒换一次（15000毫秒）
+        setInterval(showRandomText, 15000);
+    </script>
+</body>
+</html>
   <p>no more</p>
   <p> On https://likline.github.io</p>
 </body>
